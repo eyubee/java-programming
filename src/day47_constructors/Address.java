@@ -40,4 +40,9 @@ public class Address {
     public String getCountry(){
        return country;
     }
+
+
+    public String toString() {
+        return state+", "+ city+ ", "+ state+ " "+zipCode;
+    }
 }
