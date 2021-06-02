@@ -5,5 +5,6 @@ public class StaticVariableTest {
         System.out.println(StaticVariables.name);
         System.out.println(StaticVariables.userName);
         System.out.println(StaticVariables.age);
+        System.out.println("locatore username = "+Locators.password);
     }
 }
