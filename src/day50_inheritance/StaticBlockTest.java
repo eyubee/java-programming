@@ -6,6 +6,8 @@ public class StaticBlockTest {
         StaticBlockDemo st2= new StaticBlockDemo();//constructor (15+5)
         StaticBlockDemo st3= new StaticBlockDemo();//constructor (20+5) each constructor adds 5
         System.out.println(StaticBlockDemo.num);
+        StaticBlockDemo st4= new StaticBlockDemo(50);
+        System.out.println(StaticBlockDemo.num);
 
     }
 }

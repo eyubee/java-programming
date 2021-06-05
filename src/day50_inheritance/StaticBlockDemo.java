@@ -23,4 +23,8 @@ public class StaticBlockDemo {
         num +=5;
 
     }
+    public StaticBlockDemo(int value){
+        System.out.println("overloaded constructor -value = "+ value);
+        num =num+value;
+    }
 }
