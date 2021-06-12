@@ -3,7 +3,8 @@ package day47_constructors;
 public class Student {
     private String name;
 
-    public Student(){
+    public Student()
+    {
         System.out.println("no-args constructor");
     }
     public Student(String name){

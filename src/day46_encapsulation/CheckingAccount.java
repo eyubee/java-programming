@@ -7,6 +7,7 @@ public class CheckingAccount {
     private String type;
 
     public void setBalance(int balance) {
+
         this.balance = balance;
     }
 
@@ -16,6 +17,7 @@ public class CheckingAccount {
     }
 
     public void setAccountNumber(double accountNumber) {
+
         this.accountNumber = accountNumber;
     }
 
