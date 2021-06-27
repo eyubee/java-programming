@@ -12,6 +12,9 @@ public class Intstagram extends  MobileApp {
         super.useTheApp(minutes);
 
     }
-
+//    @Override
+//    public Discord useTheApp(){
+//        return new Discord();
+//    }
 
 }

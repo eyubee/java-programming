@@ -19,4 +19,8 @@ public class Discord extends  MobileApp{
         System.out.println("app name " +getName());
         System.out.println("app version " + getVersion());
     }
+    public class ChangeDataType extends MobileApp{
+
+    }
+
 }

@@ -2,23 +2,41 @@ package replit;
 
 public class TV {
     private int channel=1;
-    private int volumeLevel=0;
+    private static int volumeLevel=0;
     private boolean on= false;
     private String brand ="undefined";
 
-    public void setVolumeLevel(int volumeLevel ){
-        this.volumeLevel= volumeLevel;
+    @Override
+    public String toString() {
+        return "TV{" +
+                "channel=" + channel +
+                ", volumeLevel=" + volumeLevel +
+                ", on=" + on +
+                ", brand='" + brand + '\'' +
+                '}';
     }
-    public int getVolumeLevel(){
+
+    public void  setVolumeLevel(int volumeLevel ){
+        if((volumeLevel > 0 && volumeLevel <7 )&& (isOn())){
+
+            this.volumeLevel= volumeLevel;
+        } else {
+            System.out.println("ERROR: TV is either OFF or invalid Volume level");
+        }
+    }
+    public static int getVolumeLevel(){
         return volumeLevel;
     }
+
     public void  setChannel(int channel){
-        this.channel= channel;
+
+        if(channel<=0 || channel > 120){
+            System.out.println("ERROR: TV is either OFF or invalid Channel");
+        }else {
+            this.channel= channel;
+        }
     }
     public int getChannel(){
-        if(channel<=0){
-            System.out.println("ERROR: TV is either OFF or invalid Channel");
-        }
         return channel;
     }
 
@@ -28,45 +46,47 @@ public class TV {
     public String getBrand(){
         return brand;
     }
-    public int channelUp(int channel){
-        this.channel= channel;
-        return channel +1;
+    public void  channelUp(){
+        channel++ ;
+    }
+    public void channelDown(){
+
+   channel--;
     }
 
-    public int volumeDown(int volumeLevel){
-        this.channel= volumeLevel;
+    public void volumeDown(){
         if(volumeLevel< 0 && volumeLevel >7 ){
             System.out.println("ERROR: TV is either OFF or invalid Volume level");
+        }else {
+            volumeLevel--;
         }
-        return volumeLevel;
     }
-    public int volumeUp(int volumeLevel){
-        this.channel= volumeLevel;
+
+    public  void volumeUp(){
         if(volumeLevel< 0 && volumeLevel >7 ){
             System.out.println("ERROR: TV is either OFF or invalid Volume level");
+        }else{
+            volumeLevel++;
         }
-        return volumeLevel;
+
     }
-    public boolean isOn( boolean on){
-        this.on= on;
-        if(on==true){
-            return on;
-        }
+    public boolean isOn(){
         return on;
     }
-    public String turnOn(){
-        this.on= on;
+    public void turnOn(){
         if(on==true){
-            return "TV is already ON";
+            System.out.println("TV is already ON");
+        }else {
+            System.out.println("TV is already OFF");
         }
-        return "TV is already OFF";
     }
-    public String turnOff(){
-        this.on= on;
+    public void turnOff(){
         if(on == false){
-            return "TV is already OFF";
+            System.out.println("TV is already OFF");
+        } else {
+            System.out.println("TV is already ON");
         }
-        return "TV is already ON";
+
     }
     public TV(){
         System.out.println("Creating TV object using no args-constructor");
@@ -76,3 +96,5 @@ public class TV {
         System.out.println("Creating TV object using 1 arg - constructor");
     }
 }
+
+

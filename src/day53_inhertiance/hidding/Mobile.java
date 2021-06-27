@@ -4,6 +4,7 @@ public class Mobile extends Phone{
     String type= "mobile phone";
     /** this is method hiding
      * we are hidding use() static method */
+    String test=
     public static void use(){
         System.out.println("using mobile phone");
 
