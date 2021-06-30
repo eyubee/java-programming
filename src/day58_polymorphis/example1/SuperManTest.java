@@ -1,6 +1,4 @@
-package day58_polymorphis;
-
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
+package day58_polymorphis.example1;
 
 public class SuperManTest {
     public static void main(String[] args) {
