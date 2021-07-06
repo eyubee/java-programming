@@ -1,6 +1,10 @@
 package replit;
+import java.util.*;
+
+import java.util.Arrays;
 
 public class Color {
+    private int[] rgb = new int[3];
     public final static int[] WHITE     = new int[]{255, 255, 255};
     public final static int[] LIGHT_GRAY = new int[]{192, 192, 192};
     public final static int[] GRAY      = new int[]{128, 128, 128};
@@ -17,7 +21,11 @@ public class Color {
 
     public Color(int r, int g, int b){
         //TODO
+        rgb[0]=r;
+        rgb[1]=g;
+        rgb[2]=b;
     }
+
 
     /**
      * Public no- args constructor: sets default color as "white" (255,255,255)
@@ -25,7 +33,7 @@ public class Color {
      */
     public Color() {
         //TODO
-
+this(255,255,255);
     }
 
     /**
@@ -53,8 +61,36 @@ public class Color {
 
 
         //TODO
+      if(Arrays.equals(rgb,WHITE)){
+          return "white";
+      } else if (Arrays.equals(rgb,RED)){
+          return "red";
+      } else if (Arrays.equals(rgb,LIGHT_GRAY)){
+          return "light gray";
+        }else if(Arrays.equals(rgb,GRAY)){
+          return "gray";
+      }else if(Arrays.equals(rgb,DARK_GRAY)){
+          return "dark gray";
+      }else if(Arrays.equals(rgb,BLACK)){
+          return "black";
+      }else if(Arrays.equals(rgb,PINK)){
+          return "pink";
+      }else if(Arrays.equals(rgb,ORANGE)){
+          return "orange";
+      }else if(Arrays.equals(rgb,YELLOW)){
+          return "yellow";
+      }else if(Arrays.equals(rgb,GREEN)){
+          return "green";
+      }else if(Arrays.equals(rgb,MAGENTA)){
+          return "magenta";
+      }else if(Arrays.equals(rgb,CYAN)){
+          return "cyan";
+      }else if(Arrays.equals(rgb,BLUE)){
+          return "blue";
+      }
 
-        return null; //change this to return colors
+        return "n/a";
+
     }
 
 }
